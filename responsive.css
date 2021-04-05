@@ -1,0 +1,25 @@
+
+@media (max-width: 576px) { 
+    body{
+        margin-left: none;
+        margin-right: none;
+    }
+    .granger{
+        margin-top: -50px;
+    }
+    .logo {
+        width: 400px;
+    }
+    .input-container {
+        padding: 20px;
+        width: 400px;
+    }
+    .btns .btn {
+        min-width: 54px;
+        text-align: center;
+    }
+    
+    .hermione {
+        transform: scale(0.8);
+    }
+}

@@ -1,0 +1,96 @@
+#head{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 90px;
+}
+body{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+        .container-2 {
+            margin-top: 120px;
+            width: 100%;
+    padding: 0 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo {
+            max-width: 500px;
+    width: 100%;
+        }
+        .hermione {
+            height: 97vh;
+        }
+        .input-container {
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            max-width: 584px;
+        }
+        .search-icon,
+        .microphone {
+            position: absolute;
+            z-index: 10;
+        }
+        .search-icon {
+            left: 10px;
+            width: 20px;
+            height: 20px;
+            fill: #9aa0a6;
+        }
+        .microphone {
+            right: 10px;
+            width: 24px;
+            height: 24px;
+        }
+        .search {
+            width: 100%;
+            max-width: 584px;
+    padding-left: 40px;
+            background: #fff;
+            display: flex;
+            border: 1px solid #dfe1e5;
+    outline: none;
+            box-shadow: none;
+            border-radius: 24px;
+            z-index: 3;
+            height: 44px;
+            margin: 0 auto;
+        }
+        .search:hover {
+            background-color: #fff;
+            box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+            border-color: rgba(223, 225, 229, 0);
+        }
+        .btns {
+            display: flex;
+        }
+        .btns .btn {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #3c4043;
+            font-family: arial, sans-serif;
+            font-size: 14px;
+            margin: 11px 4px;
+            padding: 10px 16px;
+            min-width: 54px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+        }
+        .btns .btn:hover {
+            box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+            background-color: #f8f9fa;
+            border: 1px solid #dadce0;
+            color: #202124;
+        }
