@@ -22,8 +22,9 @@
 				<div class="container-2">
 					<img class="logo" src="Images/granger-logo.png" alt="Granger in Harrypotter font">
 					<div class="input-container">
-						<div class="search-bar" onsubmit="return redirectGoogle(event)">
-							<input class="search" type="text" placeholder="Cause she knows everything." />
+						<div class="search-bar">
+							<input class="search" id="searchInput" type="text"
+								placeholder="Cause she knows everything." onkeydown="handleSearch(event)" />
 							<svg class="search-icon" focusable="false" xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24">
 								<path
@@ -46,9 +47,12 @@
 						</div>
 					</div>
 					<div class="btns">
-						<a href="backend.html" class="btn">Ask&nbspGranger</a>
-						<a href="backend2.html" class="btn">I'm&nbspFeeling&nbspBrilliant</a>
+						<a class="btn">Ask&nbspGranger</a>
+						<a class="btn">I'm&nbspFeeling&nbspBrilliant</a>
 					</div>
+
+
+					<div id="SolutionArea"></div>
 				</div>
 			</div>
 			<div class="col-sm-2">
@@ -71,13 +75,21 @@
 	<script src="https://kit.fontawesome.com/96ab435ab5.js" crossorigin="anonymous"></script>
 
 	<script>
-		function redirectGoogle(event) {
-			event.preventDefault();
-			const searchQuery = document.getElementById('searchQuery').value;
-			const encodedQuery = encodeURIComponent(searchQuery);
-			window.location.href = `https://www.google.com/search?q=${encodedQuery}`;
-			return false;
+		function handleSearch(event) {
+			if (event.keyCode === 13) { // Check if the key pressed is Enter (key code 13)
+				event.preventDefault(); // Prevent form submission
+
+				var keyword = document.getElementById("searchInput").value;
+				console.log(keyword);
+
+				// Construct the search URL with the keyword
+				var searchURL = "https://www.google.com/search?q=" + keyword;
+
+				// Redirect the page to the search URL
+				window.location.href = searchURL;
+			}
 		}
+
 	</script>
 </body>
 
